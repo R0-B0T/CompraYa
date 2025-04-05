@@ -10,7 +10,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"src/test/resources/features"},
-        glue = {"definitions"},
+        glue = {"steps"},
         tags = "@afiliacionFisico",
         publish = true
 )

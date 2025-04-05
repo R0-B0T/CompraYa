@@ -82,5 +82,3 @@ public class CompraYaLocators
         PageFactory.initElements(driver, this);
     }
 }
-
-}
