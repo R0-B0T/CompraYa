@@ -52,5 +52,21 @@ public class CompraYaPage {
         }
     }
 
+    public void selectTpDocument(String tipoDocumento)
+    {
+        if (tipoDocumento.equals("DNI/CE"))
+        {
+            this.locatorMap.tipoDocumentoDNI.click();
+        }
+        else if(tipoDocumento.equals("RUC"))
+        {
+            this.locatorMap.tipoDocumentoRUC.click();
+        } else
+        {
+            System.out.println("Tipo de documento no encontrado: " + tipoDocumento);
+        }
+
+    }
+
 
 }

@@ -23,6 +23,11 @@ public class CompraYaSteps
         cyPage.selectProduct(producto);
     }
 
+    @When("el usuario elige el tipo de documento {string}")
+    public void el_usuario_elige_el_tipo_de_documento(String tipoDocumento)
+    {
+        cyPage.selectTpDocument(tipoDocumento);
+    }
 
 
 }
