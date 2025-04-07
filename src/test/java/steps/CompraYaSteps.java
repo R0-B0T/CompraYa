@@ -1,23 +1,28 @@
 package steps;
 
 import io.cucumber.java.en.Given;
-import locators.CompraYaLocators;
-import org.openqa.selenium.WebDriver;
+import io.cucumber.java.en.When;
 import pages.CompraYaPage;
 import utils.DriverManager;
 
 public class CompraYaSteps
 {
-    private WebDriver driver;
-    private CompraYaPage CompraYaPage;
-    private CompraYaLocators locatorMap;
+    private CompraYaPage cyPage;
 
     @Given("que el usuario ingresa a la página de Compraya")
-    public void que_el_usuario_ingresa_a_la_página_de_compraya() {
+    public void que_el_usuario_ingresa_a_la_página_de_compraya()
+    {
 
-        CompraYaPage compraYaPage = new CompraYaPage(DriverManager.getDriver());
-        compraYaPage.openNavegador();
+        cyPage = new CompraYaPage(DriverManager.getDriver());
+        cyPage.openNavegator();
     }
+
+    @When("el usuario selecciona el producto {string}")
+    public void el_usuario_selecciona_el_producto(String producto)
+    {
+        cyPage.selectProduct(producto);
+    }
+
 
 
 }
