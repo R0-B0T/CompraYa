@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class CompraYaLocators
 {
     //Productos de Compraya
@@ -50,23 +52,25 @@ public class CompraYaLocators
     @FindBy(xpath = "//input[@name='RUC']")
     public WebElement numeroRUC;
 
+    //Botón Validación tipo de documento
     @FindBy(xpath = "//button[contains(text(), 'Confirmar')]")
     public WebElement btnConfirmar;
 
-    @FindBy(xpath = "//div[contains(text(), '¡DNI verificado correctamente!')]]")
-    public WebElement mensajeDNI;
+    //Ingresar número de documento
+    @FindBy(xpath = "//input[@name='nombres']")
+    public List<WebElement> labelNombre;
 
     @FindBy(xpath = "//div[contains(text(), '¡CE verificado correctamente!')]")
     public WebElement mensajeCE;
 
     //Datos Personales
-    @FindBy()
+    @FindBy(xpath = "//input[@name='nombres']")
     public WebElement nombres;
 
-    @FindBy()
+    @FindBy(xpath = "//input[@name='apellido paterno']")
     public WebElement apellidoPat;
 
-    @FindBy()
+    @FindBy(xpath = "//input[@name='apellido materno']")
     public WebElement apellidoMat;
 
     @FindBy(xpath = "//input[@name='celular']")

@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"src/test/resources/features"},
-        glue = {"steps", "hooks"},
-        tags = "@afiliacionFisico",
+        glue = {"steps"},
+        tags = "@Izivendo",
         publish = true
 )
 
