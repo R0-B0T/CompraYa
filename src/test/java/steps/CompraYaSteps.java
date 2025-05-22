@@ -15,9 +15,7 @@ public class CompraYaSteps
 
     @Given("que el usuario ingresa a la página de Compraya")
     public void que_el_usuario_ingresa_a_la_página_de_compraya()
-    {
-
-        cyPage = new CompraYaPage(DriverManager.getDriver());
+    {   cyPage = new CompraYaPage();
         cyPage.abrirNavegador();
     }
 

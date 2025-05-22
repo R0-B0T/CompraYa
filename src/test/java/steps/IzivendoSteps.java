@@ -2,9 +2,8 @@ package steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import pages.CompraYaPage;
 import pages.IzivendoPage;
-import utils.DriverManager;
+
 
 public class IzivendoSteps
 {
@@ -12,8 +11,7 @@ public class IzivendoSteps
 
     @Given("que el usuario navega a la página de IZIVENDO")
     public void que_el_usuario_navega_a_la_página_de_izivendo()
-    {
-        izivendoPage = new IzivendoPage(DriverManager.getDriver());
+    {   izivendoPage = new IzivendoPage();
         izivendoPage.abrirNavegadorIzivendo();
     }
 
@@ -43,16 +41,30 @@ public class IzivendoSteps
     }
 
     @When("selecciona la tarjeta {string}")
-    public void selecciona_la_tarjeta(String tarjeta)
+    public void selecciona_la_tarjeta(String nombreTarjeta)
     {
-        izivendoPage.seleccionarTarjeta(tarjeta);
+        izivendoPage.seleccionarTarjeta(nombreTarjeta);
     }
 
     @When("escribe el nombre del cupon {string}")
     public void escribe_el_nombre_del_cupon(String cupon)
     {
-        izivendoPage.ingresarCupon(cupon);
-
+        izivendoPage.agregarCupon(cupon);
     }
 
+    @When("escribe el correo {string}")
+    public void escribe_el_correo(String correo)
+    {
+        izivendoPage.agregarCorreo(correo);
+    }
+
+    @When("escribe el celular {string}")
+    public void escribe_el_celular(String celular) {
+        izivendoPage.agregarCelular(celular);
+    }
+
+    @When("selecciona el boton Grabar diseño")
+    public void selecciona_el_boton_grabar_diseño() {
+        izivendoPage.grabarTarjeta();
+    }
 }

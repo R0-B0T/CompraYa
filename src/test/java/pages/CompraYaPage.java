@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.DriverManager;
 
 import java.time.Duration;
 import java.util.List;
@@ -15,7 +16,9 @@ public class CompraYaPage {
     private CompraYaLocators locatorMap;
     private String tipDocumentoSeleccionado;
 
-    public CompraYaPage(WebDriver driver) {
+    public CompraYaPage() {
+        this.driver = DriverManager.getDriver();
+
         this.driver = driver;
         this.locatorMap = new CompraYaLocators(driver);
     }

@@ -24,10 +24,14 @@ public class IzivendoLocators
     @FindBy(xpath = "//input[@id='coupon']")
     public WebElement cupon;
 
-    @FindBy(xpath = "//div[ contains(@class,'error-validate')\n" +
-            "      and preceding-sibling::*[1][ self::input[@id='coupon'] ] ]")
-    public List<WebElement> mensajeCupon;
+    @FindBy(xpath = "//input[@id='email']")
+    public WebElement correo;
 
+    @FindBy(xpath = "//input[@id='phone']")
+    public WebElement celular;
+
+    @FindBy(xpath = "//a[contains(text(), 'Guardar diseño')]")
+    public WebElement btnGrabar;
 
 
     public IzivendoLocators(WebDriver driver)
