@@ -1,5 +1,5 @@
 @Izivendo
-Feature: Generación de la
+Feature: Generación de la tarjeta personalizada en izivendo
 
   Scenario Outline: Validar la generación de una tarjeta personalizada
     Given que el usuario navega a la página de IZIVENDO
@@ -12,6 +12,7 @@ Feature: Generación de la
     And escribe el correo "<correo>"
     And escribe el celular "<celular>"
     And selecciona el boton Grabar diseño
+
 
 
 

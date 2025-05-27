@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/features"},
         glue = {"steps"},
-        tags = "@Izivendo",
+        tags = "@LibroReclamaciones",
         publish = true
 )
 
